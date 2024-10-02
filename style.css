@@ -59,119 +59,113 @@ header {
 
 /* /* Logo */
 
-/* Navigation Styling */
+
 /* Navigation Styling */
 nav {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;     /* Centers content vertically */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    padding: 10px;
     position: relative;
-    padding: 10px 0;
+}
+
+/* Hide the menu on mobile */
+.menu-toggle {
+    display: none; /* Hide the menu toggle on larger screens */
+    cursor: pointer;
+    font-size: 20px;
 }
 
 /* Navigation List */
 nav ul {
     list-style-type: none;
-    display: flex;
-    gap: var(--padding-large);
-    margin: 0;
+    display: flex; /* Display as a flex container */
+    gap: var(--padding-small); /* Space between items */
 }
 
-/* Navigation List Items */
+/* Navigation List Item */
 nav ul li {
-    position: relative;
+    position: relative; /* Positioning context for pseudo-elements */
 }
 
-/* Navigation Links */
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color, #fff); /* Default text color */
+    color: var(--text-color); /* Text color variable */
     font-weight: 300;
     text-transform: uppercase;
-    padding: var(--padding-small) var(--padding-medium);
-    transition: color 0.3s ease, transform 0.3s ease;
+    padding: var(--padding-small) var(--padding-medium); /* Padding around links */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition effects */
 }
 
-/* Hover Effects */
+/* Hover Effects with Animation */
 nav ul li a:hover {
-    color: var(--hover-bg-color, #f39c12); /* Hover color */
+    color: var(--hover-bg-color); /* Color change on hover */
     transform: scale(1.1); /* Slight scaling on hover */
 }
 
 /* Underline Effect on Hover */
 nav ul li a::after {
-    content: '';
+    content: ''; /* Creates an underline */
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: var(--hover-bg-color, #f39c12); /* Underline color */
-    left: 50%;
+    background-color: var(--hover-bg-color); /* Underline color */
+    left: 50%; /* Centered */
     bottom: 0;
-    transition: width 0.3s ease, left 0.3s ease;
+    transition: width 0.3s ease, left 0.3s ease; /* Transition for underline */
 }
 
 nav ul li a:hover::after {
-    width: 100%;
-    left: 0;
+    width: 100%; /* Full width on hover */
+    left: 0; /* Align to the left */
 }
 
-/* Mobile-specific Styling */
-.menu-toggle {
-    display: none;
-}
-
-/* Mobile Menu is hidden initially */
-nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-/* Responsive Mobile Styling */
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Show hamburger icon in mobile view */
+    nav {
+        justify-content: space-between; /* Space between items */
+    }
+
+    /* Hamburger icon visible on mobile */
     .menu-toggle {
-        display: block;
-        color: var(--text-color, #fff);
-        font-size: 30px;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        cursor: pointer;
+        display: block; /* Show on mobile */
+        color: var(--text-color); /* Text color for hamburger */
     }
 
     nav ul {
-        flex-direction: column;  /* Stack the list items */
-        background-color: #000;  /* Background color for mobile menu */
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        transition: height 0.3s ease, visibility 0.3s ease;
+        flex-direction: column; /* Stack items vertically */
+        visibility: hidden; /* Hidden by default */
+        position: fixed; /* Fixed positioning for full screen */
+        left: 0; /* Align to the left */
+        top: 0; /* Align to the top */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(8, 6, 6, 0.95); /* Semi-transparent background */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        transition: visibility 0s, opacity 0.3s ease; /* Smooth transition */
+        opacity: 0; /* Hidden by default */
     }
 
-    /* Mobile menu visible when the open class is added */
+    /* Menu open state */
     nav ul.open {
-        height: auto;
-        visibility: visible;
-        padding: 10px;
+        visibility: visible; /* Make it visible */
+        opacity: 1; /* Fully opaque */
+        padding: 10px; /* Padding around the menu */
     }
 
     nav ul li {
-        width: 100%;
-        text-align: center;
+        width: 100%; /* Full width for menu items */
+        text-align: center; /* Center align text */
     }
 
     nav ul li a {
-        padding: 15px;
-        display: block;
-        font-size: 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px; /* Adjust padding for links */
+        display: block; /* Make links block level */
+        font-size: 18px; /* Font size for links */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divider between items */
     }
 }
-
 
 /* Modal Styles */
 .modal {
@@ -208,22 +202,19 @@ nav ul {
     cursor: pointer;
 }
 
-
-
 /* Hero Section */
 #hero {
-    
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
     text-align: center;
     color: var(--text-color);
     position: relative;
+    padding: 20px; /* Add some padding for smaller screens */
 }
-
 
 #hero::after {
     content: '';
@@ -232,44 +223,84 @@ nav ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Adds a dark overlay */
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensure content is above the overlay */
 }
 
+/* Responsive Image */
 .hero-image {
-    width: 300px;
-    height: 300px;
+    width: 40%; /* Flexible width for responsiveness */
+    max-width: 300px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
-    object-fit: cover;
-    margin-right: 60px;
-    transition: transform 0.3s ease;
+    object-fit: cover; /* Cover the element */
+    margin: 0 auto 20px; /* Center image and add margin */
+    transition: transform 0.3s ease; /* Scale transition */
     border: 5px solid var(--primary-color);
 }
 
 .hero-image:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale on hover */
 }
 
+/* Responsive Text */
 .hero-text h1 {
-    font-size: var(--font-large);
+    font-size: 3rem; /* Use rem for flexibility */
     font-weight: 900;
     color: var(--primary-color);
+    margin-bottom: 10px; /* Add space below */
 }
 
 .hello-text {
-    padding-top: 20px;
-    font-size: var(--font-small);
-    letter-spacing: 5px;
-
+    padding-top: 10px; /* Adjust padding for smaller screens */
+    font-size: 1.2rem; /* Responsive font size */
+    letter-spacing: 2px; /* Reduced letter spacing for smaller screens */
 }
 
 .role-text {
-    font-size: var(--font-medium);
+    font-size: 1.5rem; /* Responsive font size */
     margin-bottom: var(--padding-large);
+}
+
+/* Media Queries for Further Responsiveness */
+@media (max-width: 768px) {
+    .hero-image {
+        width: 70%; /* Increase image size on smaller screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem; /* Smaller font size for h1 */
+    }
+
+    .hello-text {
+        font-size: 1rem; /* Smaller font size for hello text */
+    }
+
+    .role-text {
+        font-size: 1.2rem; /* Smaller font size for role text */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        width: 90%; /* Full width on very small screens */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Further reduce h1 size */
+    }
+
+    .hello-text {
+        font-size: 0.9rem; /* Further reduce hello text size */
+    }
+
+    .role-text {
+        font-size: 1rem; /* Further reduce role text size */
+    }
 }
 
 .btn-container {
