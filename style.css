@@ -120,6 +120,12 @@ nav ul li a:hover::after {
     display: none;
 }
 
+/* Mobile Menu is hidden initially */
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
 /* Responsive Mobile Styling */
 @media (max-width: 768px) {
     /* Show hamburger icon in mobile view */
@@ -142,10 +148,11 @@ nav ul li a:hover::after {
         width: 100%;
         height: 0;
         overflow: hidden;
-        transition: height 0.3s ease;
         visibility: hidden;
+        transition: height 0.3s ease, visibility 0.3s ease;
     }
 
+    /* Mobile menu visible when the open class is added */
     nav ul.open {
         height: auto;
         visibility: visible;
