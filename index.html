@@ -14,21 +14,20 @@
     <header>
         <nav>
             <!-- Hamburger Icon for Mobile -->
-            <div class="menu-toggle" id="mobile-menu">
-                &#9776;
-            </div>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
     
-            <!-- Navigation List -->
+            <!-- Navigation Links -->
             <ul id="nav-list">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+    
     
     
     
@@ -271,14 +270,28 @@
         
     </section>
     <script>
-
-
+       
+       document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
 
-    menuToggle.addEventListener('click', function () {
+    menuToggle.addEventListener('click', () => {
+        // Toggle the open class on the nav list
         navList.classList.toggle('open');
     });
+
+    // Close the menu when any link is clicked
+    navList.addEventListener('click', (event) => {
+        // Close the menu
+        if (event.target.tagName === 'A') {
+            navList.classList.remove('open');
+        }
+    });
+});
+
+
+
+
 
 
         // Get the modal
