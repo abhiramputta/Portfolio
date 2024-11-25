@@ -10,12 +10,12 @@
     color: #f39c12;
 }
 
-/* Main video and content container */
 .videodiv {
     display: flex;
-
+    flex-wrap: wrap;
     margin-top: 20px;
     padding: 20px;
+    gap:20px;
     border-radius: 20px;
     border: 2px solid rgba(163, 152, 152, 0.5);
     background-color: #1c1c1c;
@@ -26,8 +26,6 @@
     flex:1;
     display: flex;
     justify-content: center;
-    align-items: center;
-   
     align-items: center;
     min-width: 60%;
     
