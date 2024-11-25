@@ -1,0 +1,112 @@
+/* Header styling */
+.proheader {
+    border-radius: 10px;
+    border: 2px solid rgba(201, 182, 182, 0.5);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.8em;
+    color: #f39c12;
+}
+
+/* Main video and content container */
+.videodiv {
+    display: flex;
+
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(163, 152, 152, 0.5);
+    background-color: #1c1c1c;
+}
+
+/* Video container */
+.content {
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    align-items: center;
+    min-width: 60%;
+    
+    border-radius: 20px;
+    border: 2px solid rgba(153, 144, 144, 0.5);
+    background-color: #111;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+/* Video styling */
+.videoplay {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Project information container */
+.project-info {
+    flex: 1;
+    border-radius: 20px;
+    border: 2px solid rgba(173, 160, 160, 0.5);
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: #f39c12;
+}
+
+/* List styling in project info */
+.project-info ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 1.1em;
+    color: #bdc3c7;
+    
+}
+
+/* Body styling */
+body {
+    background-color: #121212;
+    color: #f39c12;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+}
+
+/* About text */
+.about {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: justify;
+    color: #bdc3c7;
+}
+
+/* Additional information section */
+.morediv {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid rgba(163, 152, 152, 0.5);
+    background-color: #1c1c1c;
+}
+
+/* Headings in morediv */
+.morediv h1, .morediv h2 {
+    color: #f39c12;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.morediv p, .morediv ul {
+    font-size: 1em;
+    color: #bdc3c7;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.morediv ul li {
+    margin: 5px 0;
+}
+
