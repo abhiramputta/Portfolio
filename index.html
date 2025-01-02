@@ -70,6 +70,35 @@
     </div>
 </div>
 
+<section id="education">
+    <h2>Education</h2>
+    <div class="timeline">
+        <div class="timeline-container left">
+            <div class="content">
+                <h3>Bachelor of Technology</h3>
+                <p>Amrita Vishwa Vidyapeetham, Coimbatore (2021 - 2025)</p>
+                <p>CGPA : 7.76</p>
+            </div>
+        </div>
+        <div class="timeline-container right">
+            <div class="content">
+                <h3>Intermediate</h3>
+                <p>Sasi Junior College(2019-2021)</p>
+                <p>CGPA : 9.59</p>
+            </div>
+        </div>
+        <div class="timeline-container left">
+            <div class="content">
+                <h3>High School</h3>
+                <p>Narayana High school (2017 - 2019)</p>
+                <p>CGPA : 10</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
     
 
     <!-- About Me Section -->
@@ -81,7 +110,7 @@
         </div>
         
         <div class="coding-profiles">
-            <div class ="sideheadings">Coding Profiles</div>
+            <div class ="sideheadings">Profiles</div>
             <div class="profile-links">
                 <div class="profile-item">
                     <a href="https://leetcode.com/u/jagadhabhiram/" target="_blank" title="LeetCode Profile">
@@ -94,6 +123,24 @@
                         <img src="src/codingprofilepics/gfg.png" alt="GFG Logo" class="profile-icon">
                     </a>
                     <p>GeeksforGeeks</p>
+                </div>
+                <div class="profile-item">
+                    <a href="https://www.hackerrank.com/profile/abhiramputta3113" target="_blank" title="hackerrank Profile">
+                        <img src="src/codingprofilepics/hackerrank.png" alt="GFG Logo" class="profile-icon">
+                    </a>
+                    <p>hackerrank</p>
+                </div>
+                <div class="profile-item">
+                    <a href="https://www.linkedin.com/in/abhiram-putta/" target="_blank" title="LinkedIn Profile">
+                        <img src="src/codingprofilepics/linkedin.png" alt="GFG Logo" class="profile-icon">
+                    </a>
+                    <p>LinkedIn</p>
+                </div>
+                <div class="profile-item">
+                    <a href="https://github.com/abhiramputta" target="_blank" title="GitHub Profile">
+                        <img src="src/codingprofilepics/git.png" alt="GFG Logo" class="profile-icon">
+                    </a>
+                    <p>Github</p>
                 </div>
             </div>
         </div>
@@ -350,6 +397,29 @@
                 modal.style.display = "none";
             }
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+    const containers = document.querySelectorAll(".timeline-container");
+    containers.forEach((container, index) => {
+        setTimeout(() => {
+            container.classList.add("active");
+        }, index * 2000); // Each container appears 1 second apart
+    });
+});
+
+document.addEventListener('scroll', () => {
+    const containers = document.querySelectorAll('.timeline-container');
+    const triggerHeight = window.innerHeight * 0.8;
+
+    containers.forEach((container) => {
+        const top = container.getBoundingClientRect().top;
+        if (top < triggerHeight) {
+            container.classList.add('active');
+        }
+    });
+});
+
+
         
     </script>
 
@@ -357,5 +427,5 @@
     <footer>
         <p>© 2024 Putta Jagadhabhiram. All Rights Reserved.</p>
     </footer>
-</body>
+</body>z
 </html>

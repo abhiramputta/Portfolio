@@ -177,7 +177,7 @@ nav ul li a:hover::after {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(15, 4, 4, 0.8); /* Black w/ opacity */
+  
 }
 
 .modal-content {
@@ -351,6 +351,135 @@ nav ul li a:hover::after {
 }
 
 
+/* Education Section */
+#education {
+    padding: 50px 20px;
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+}
+
+#education h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+/* Timeline layout */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Centered line */
+    transform: translateX(-50%);
+    width: 4px;
+    background-color: var(--primary-color);
+    height: 100%;
+    z-index: -1;
+}
+
+/* Timeline container */
+.timeline-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+    opacity: 0; /* Hidden by default for animation */
+    transform: translateY(50px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.timeline-container.active {
+    opacity: 1;
+    transform: translateY(0); /* Moves to original position */
+}
+
+/* Circle on timeline */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centered on the line */
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: none;
+}
+
+/* Education content */
+.timeline-container .content {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    padding: 15px 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 45%; /* Adjusted width */
+    text-align: left;
+    margin-left: 10px;
+}
+
+.timeline-container.left .content {
+    margin-right: auto; /* Content aligns left */
+}
+
+.timeline-container.right .content {
+    margin-left: auto; /* Content aligns right */
+}
+
+/* Animation delay for cascading effect */
+.timeline-container:nth-child(1) {
+    transition-delay: 0.2s;
+}
+.timeline-container:nth-child(2) {
+    transition-delay: 0.4s;
+}
+.timeline-container:nth-child(3) {
+    transition-delay: 0.6s;
+}
+.timeline-container:nth-child(4) {
+    transition-delay: 0.8s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 10%; /* Move line slightly left for smaller screens */
+    }
+
+    .timeline-container {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start;
+    }
+
+    .timeline-container .content {
+        width: 80%; /* Wider content for smaller screens */
+        margin-left: 10%;
+    }
+
+    .timeline-container::before {
+        left: 10%; /* Adjust circle position */
+        height: 20px;
+        width: 20px;
+    }
+    
+}
+
+
+
+
 #about {
     padding: 20px 20px;
 }
@@ -362,7 +491,7 @@ nav ul li a:hover::after {
 }
 
 .about-text {
-    max-width: 50%;
+    flex:3;
 }
 
 
@@ -376,7 +505,7 @@ nav ul li a:hover::after {
 }
 
 .coding-profiles {
-    flex: 1;
+    flex: 3;
     text-align: center;
 
 }
@@ -386,6 +515,8 @@ nav ul li a:hover::after {
 .profile-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap:20px;
 }
 
 .profile-item {
@@ -393,8 +524,8 @@ nav ul li a:hover::after {
 }
 
 .profile-item img.profile-icon {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 40%;
     transition: transform 0.3s ease;
 }
@@ -556,6 +687,15 @@ nav ul li a:hover::after {
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures buttons stay at the bottom */
+}
+.project-card p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .project-card:hover {
@@ -588,7 +728,7 @@ nav ul li a:hover::after {
 .project-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: auto; 
 }
 
 .btn {
