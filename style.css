@@ -177,7 +177,6 @@ nav ul li a:hover::after {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-  
 }
 
 .modal-content {
@@ -206,7 +205,7 @@ nav ul li a:hover::after {
 #hero {
     background-size: cover;
     background-position: center;
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh; /* Use min-height instead of height */
     display: flex;
     align-items: center; /* Center content vertically */
     justify-content: center; /* Center content horizontally */
@@ -214,6 +213,7 @@ nav ul li a:hover::after {
     color: var(--text-color);
     position: relative;
     padding: 20px; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding doesn't affect layout */
 }
 
 #hero::after {
@@ -302,6 +302,18 @@ nav ul li a:hover::after {
         font-size: 1rem; /* Further reduce role text size */
     }
 }
+
+/* Prevent Overlapping */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 50px 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect height */
+}
+
 
 .btn-container {
     display: flex;
