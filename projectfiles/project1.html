@@ -1,81 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chain Reaction Game</title>
-    <link rel="stylesheet" href="stylep.css">
-</head>
-<body>
-    <div class="proheader">
-        <h1>The Chain Reaction Game Demo Video</h1>
-    </div>
-    <div class="videodiv">
-        <!-- Flex container for video and text content -->
-        <div class="content">
-            <video controls autoplay loop muted class="videoplay">
-                <source src="../src/projectvideos/chain_game_demo.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="project-info">
-            <h2 style="font-size: 40px;">Tech Stack</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ul>
-            <h2 style="font-size: 40px;">About the Project</h2>
-            <p class="about">
-                This project, inspired by BFS traversal concepts learned in the Data Structures and Algorithms course, is an interactive game. 
-                The player initiates a chain reaction by clicking on boxes, aiming to strategically gain control over the game board.
-            </p>
-        </div>
-    </div>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Chain Reaction Game</title>  
+    <link rel="stylesheet" href="stylep.css">  
+</head>  
+<body>  
+    <!-- Header Section -->  
+    <div class="proheader">  
+        <h1>The Chain Reaction Game Demo Video</h1>  
+    </div>  
 
-    <div class="morediv">
-        <h1 style="text-align: center; font-size: 60px;">More Information About the Project</h1>
-        <h2>Project Overview</h2>
-        <p>
-            The Chain Reaction Game is a strategic, turn-based multiplayer game where players place orbs on a grid. The goal is to dominate the board by creating chain reactions, making for dynamic and unpredictable gameplay. The project combines logic-based algorithms with a user-friendly interface to provide an engaging experience.
-        </p>
+    <!-- Video Section -->  
+    <div class="videodiv">  
+        <div class="content">  
+            <video controls autoplay loop muted class="videoplay">  
+                <source src="../src/projectvideos/chain_game_demo.mp4" type="video/mp4">  
+            </video>  
+        </div>  
+        <div class="project-info">  
+            <h2>Tech Stack</h2>  
+            <ul>  
+                <li>HTML</li>  
+                <li>CSS</li>  
+                <li>JavaScript</li>  
+            </ul>  
+            <h2>About the Project</h2>  
+            <p class="about">  
+                This project, inspired by BFS traversal concepts learned in the Data Structures and Algorithms course, is an interactive game.  
+                The player initiates a chain reaction by clicking on boxes, aiming to strategically gain control over the game board.  
+            </p>  
+        </div>  
+    </div>  
 
-        <h2>Gameplay Mechanics</h2>
-        <ul>
-            <li><strong>Grid-based Gameplay:</strong> Players place orbs in cells, which explode once they reach a limit, distributing orbs to neighboring cells and potentially setting off further reactions.</li>
-            <li><strong>Chain Reactions:</strong> Players can plan for chain reactions to strategically shift control of the board.</li>
-            <li><strong>Turn-based Multiplayer:</strong> Supports multiple players, each taking turns, with the game ending when a player achieves total control by eliminating other players' orbs.</li>
-        </ul>
+    <!-- Additional Information Section -->  
+    <div class="morediv">  
+        <h1>More Information About the Project</h1>  
+        <h2>Project Overview</h2>  
+        <p>  
+            The Chain Reaction Game is a strategic, turn-based multiplayer game where players place orbs on a grid. The goal is to dominate the board by creating chain reactions, making for dynamic and unpredictable gameplay.  
+        </p>  
 
-        <h2>Technical Details</h2>
-        <ul>
-            <li><strong>Programming Language:</strong> JavaScript</li>
-            <li><strong>Framework:</strong> Custom game logic, optionally using libraries for animation</li>
-            <li><strong>Algorithms:</strong> Optimized to handle chain reactions efficiently in real-time</li>
-            <li><strong>Data Structures:</strong> Efficient data handling for managing the grid state and tracking orb counts</li>
-        </ul>
+        <h2>Gameplay Mechanics</h2>  
+        <ul>  
+            <li><strong>Grid-based Gameplay:</strong> Players place orbs in cells, which explode once they reach a limit, distributing orbs to neighboring cells and potentially setting off further reactions.</li>  
+            <li><strong>Chain Reactions:</strong> Players can plan for chain reactions to strategically shift control of the board.</li>  
+            <li><strong>Turn-based Multiplayer:</strong> Supports multiple players, each taking turns, with the game ending when a player achieves total control by eliminating other players' orbs.</li>  
+        </ul>  
 
-        <h2>Challenges and Solutions</h2>
-        <p>
-            <strong>Optimizing Chain Reaction Calculations:</strong> Algorithms were developed to efficiently calculate chain reactions, minimizing lag and ensuring smooth gameplay.
-            <br>
-            <strong>Enhanced User Experience:</strong> The UI is designed to provide clear visual feedback, making it easy for players to follow the game’s progression.
-        </p>
+        <h2>Technical Details</h2>  
+        <ul>  
+            <li><strong>Programming Language:</strong> JavaScript</li>  
+            <li><strong>Framework:</strong> Custom game logic</li>  
+            <li><strong>Algorithms:</strong> Optimized to handle chain reactions efficiently</li>  
+            <li><strong>Data Structures:</strong> Efficient handling of grid state and orb counts</li>  
+        </ul>  
 
-        <h2>Skills Demonstrated</h2>
-        <ul>
-            <li>Game design and development</li>
-            <li>Logical problem-solving and algorithm optimization</li>
-            <li>Real-time data management</li>
-            <li>User experience design</li>
-        </ul>
+        <h2>Challenges and Solutions</h2>  
+        <p>  
+            <strong>Optimizing Chain Reaction Calculations:</strong> Algorithms were developed to efficiently calculate chain reactions, minimizing lag and ensuring smooth gameplay.  
+            <br>  
+            <strong>Enhanced User Experience:</strong> The UI is designed to provide clear visual feedback for better gameplay.  
+        </p>  
 
-        <h2>Future Enhancements</h2>
-        <ul>
-            <li><strong>AI Opponent:</strong> Adding an AI-based opponent for single-player mode</li>
-            <li><strong>Online Multiplayer:</strong> Enabling online multiplayer capabilities</li>
-            <li><strong>Additional Game Modes:</strong> Various difficulty levels and special modes to diversify gameplay</li>
-        </ul>
-    </div>
-</body>
-</html>
+        <h2>Skills Demonstrated</h2>  
+        <ul>  
+            <li>Game design and development</li>  
+            <li>Logical problem-solving and algorithm optimization</li>  
+            <li>Real-time data management</li>  
+            <li>User experience design</li>  
+        </ul>  
+
+        <h2>Future Enhancements</h2>  
+        <ul>  
+            <li><strong>AI Opponent:</strong> Adding an AI-based opponent for single-player mode</li>  
+            <li><strong>Online Multiplayer:</strong> Enabling online multiplayer capabilities</li>  
+            <li><strong>Additional Game Modes:</strong> Various difficulty levels to diversify gameplay</li>  
+        </ul>  
+    </div>  
+</body>  
+</html>  
