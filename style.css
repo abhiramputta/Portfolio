@@ -121,6 +121,8 @@ nav ul li a:hover::after {
     left: 0; /* Align to the left */
 }
 
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {
@@ -240,13 +242,10 @@ nav ul li a:hover::after {
     border-radius: 50%;
     object-fit: cover; /* Cover the element */
     margin: 0 auto 20px; /* Center image and add margin */
-    transition: transform 0.3s ease; /* Scale transition */
     border: 5px solid var(--primary-color);
 }
 
-.hero-image:hover {
-    transform: scale(1.1); /* Scale on hover */
-}
+
 
 /* Responsive Text */
 .hero-text h1 {
@@ -666,7 +665,6 @@ section {
     border-radius: var(--border-radius);
     width: 150px;
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -678,10 +676,7 @@ section {
     margin-bottom: 10px;
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+
 
 /* Projects Section */
 #projects .projects-container {
