@@ -36,8 +36,9 @@ body {
 
 .videoplay {
     width: 100%;
+    max-height: 70vh;
+    margin-top: auto;
     border-radius: 10px;
-    border: 2px solid #30363d; /* Border to highlight the video */
 }
 
 .project-info {
