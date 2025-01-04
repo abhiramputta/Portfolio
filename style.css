@@ -433,7 +433,7 @@ section {
 
 /* Education content */
 .timeline-container .content {
-    background-color: var(--primary-bg-color);
+    background-color:#252a2a;
     color: var(--text-color);
     padding: 15px 20px;
     border-radius: var(--border-radius);
